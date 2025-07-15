@@ -1,10 +1,10 @@
 import { Head, Link, usePage } from "@inertiajs/react";
-// import { useRoute } from "../../../vendor/tightenco/ziggy";
+import { useRoute } from "../../../vendor/tightenco/ziggy";
 import { useState } from "react";
 
 export default function Home({ posts }) {
     console.log({posts})
-    // const route = useRoute();
+    const route = useRoute();
     const { flash } = usePage().props;
     const { component } = usePage();
 
@@ -47,7 +47,7 @@ export default function Home({ posts }) {
                         </Link> */}
 
                         <Link
-                            // href={route("posts.show", post)}
+                            href={route("posts.show", post)}
                             className="text-link"
                         >
                             Read more...
