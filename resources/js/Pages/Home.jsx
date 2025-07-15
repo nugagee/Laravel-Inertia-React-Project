@@ -32,7 +32,7 @@ export default function Home({ posts }) {
             )} */}
 
             <div>
-                {posts.map((post) => (
+                {posts.data.map((post) => (
                     <div key={post.id} className="p-4 border-b">
                         <div className="text-sm text-slate-600">
                             <span>Posted on: </span>
@@ -56,7 +56,7 @@ export default function Home({ posts }) {
                 ))}
             </div>
 
-            {/* <div className="py-12 px-4">
+            <div className="py-12 px-4">
                 {posts.links.map((link) =>
                     link.url ? (
                         <Link
@@ -75,7 +75,7 @@ export default function Home({ posts }) {
                         ></span>
                     )
                 )}
-            </div> */}
+            </div>
         </>
     );
 }

@@ -14,7 +14,8 @@ class PostController extends Controller
     public function index()
     {
         // $posts = Post::all();
-        $posts = Post::latest()->get();
+        // $posts = Post::latest()->get();
+        $posts = Post::latest()->paginate(5);
         return inertia('Home', ['posts' => $posts]);
     }
 
