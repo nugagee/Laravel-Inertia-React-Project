@@ -14,7 +14,15 @@ export default function Create() {
 
     return (
         <>
-            {/* <Head title="Create" /> */}
+            <Head title="Create" />
+
+            {/* <Head>
+                <meta
+                    head-key="description"
+                    name="description"
+                    content="This is the CREATE description"
+                />
+            </Head> */}
 
             <h1 className="title">Create a new post</h1>
 

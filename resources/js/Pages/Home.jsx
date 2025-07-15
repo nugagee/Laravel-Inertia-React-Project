@@ -6,7 +6,7 @@ export default function Home({ posts }) {
     console.log({posts})
     const route = useRoute();
     const { flash } = usePage().props;
-    // const { component } = usePage();
+    const { component } = usePage();
 
     const [flashMsg, setFlashMsg] = useState(flash.message);
 
@@ -16,7 +16,7 @@ export default function Home({ posts }) {
 
     return (
         <>
-            {/* <Head title={component} /> */}
+            <Head title={component} />
 
             <h1 className="title">Hello</h1>
             {flashMsg && (
