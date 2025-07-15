@@ -6,20 +6,20 @@ export default function Home({ posts }) {
     console.log({posts})
     const route = useRoute();
     const { flash } = usePage().props;
-    const { component } = usePage();
+    // const { component } = usePage();
 
-    // const [flashMsg, setFlashMsg] = useState(flash.message);
+    const [flashMsg, setFlashMsg] = useState(flash.message);
 
-    // setTimeout(() => {
-    //     setFlashMsg(null);
-    // }, 2000);
+    setTimeout(() => {
+        setFlashMsg(null);
+    }, 2000);
 
     return (
         <>
             {/* <Head title={component} /> */}
 
             <h1 className="title">Hello</h1>
-            {/* {flashMsg && (
+            {flashMsg && (
                 <div className="absolute top-24 right-6 bg-rose-500 p-2 rounded-md shadow-lg text-sm text-white">
                     {flashMsg}
                 </div>
@@ -29,7 +29,7 @@ export default function Home({ posts }) {
                 <div className="absolute top-24 right-6 bg-green-500 p-2 rounded-md shadow-lg text-sm text-white">
                     {flash.success}
                 </div>
-            )} */}
+            )}
 
             <div>
                 {posts.data.map((post) => (

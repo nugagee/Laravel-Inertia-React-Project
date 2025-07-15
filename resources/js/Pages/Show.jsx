@@ -24,7 +24,7 @@ export default function Show({ post }) {
 
                 <div className="flex items-center justify-end gap-2">
                     <form onSubmit={submit}>
-                        <button className="bg-red-500 rounded-md text-sm px-4 py-1 text-white">
+                        <button className="bg-red-500 rounded-md text-sm px-4 py-1 text-white cursor-pointer">
                             Delete
                         </button>
                     </form>

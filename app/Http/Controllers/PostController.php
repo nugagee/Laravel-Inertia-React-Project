@@ -74,6 +74,8 @@ class PostController extends Controller
         // dd($post);
         $post->delete();
 
-        return redirect('/');
+        return redirect('/')->with(
+            'message', 'The post was deleted!'
+        );
     }
 }
